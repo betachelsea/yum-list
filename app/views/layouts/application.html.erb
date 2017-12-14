@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= link_to 'Twitterでログイン', '/auth/twitter' %>
+    <% if flash[:notice].present? %><p><%= flash[:notice] %></p><% end %>
     <%= yield %>
   </body>
 </html>
