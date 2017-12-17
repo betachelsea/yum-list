@@ -9,7 +9,11 @@
   </head>
 
   <body>
-    <%= link_to 'Twitterでログイン', '/auth/twitter' %>
+    <% if logged_in? %>
+      <%= link_to "ログアウト", logout_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Twitterでログイン', '/auth/twitter' %>
+    <% end %>
     <% if flash[:notice].present? %><p><%= flash[:notice] %></p><% end %>
     <%= yield %>
   </body>

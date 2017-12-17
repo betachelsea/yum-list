@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "top#index"
 
-  get "/signout" => "sessions#destroy"
-  get "/auth/:provider/callback" => "sessions#create"
+  get "auth/:provider/callback" => "sessions#create"
+  delete "logout" => "sessions#destroy"
 end
