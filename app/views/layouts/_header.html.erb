@@ -1,21 +1,17 @@
-<div class="bg-light">
-  <div class="container">
-    <nav class="navbar navbar-expand-sm navbar-light">
-      <%= link_to "YumList", root_path, class: "navbar-brand" %>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <% if logged_in? %>
-              <%= link_to "ログアウト", logout_path, method: :delete, class: "nav-link" %>
-            <% else %>
-              <%= link_to 'Twitterでログイン', '/auth/twitter', class: "nav-link" %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<nav class="navbar navbar-expand-sm navbar-light">
+  <%= link_to "YumList", root_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <% if logged_in? %>
+          <%= link_to "ログアウト", logout_path, method: :delete, class: "nav-link" %>
+        <% else %>
+          <%= link_to 'Twitterでログイン', '/auth/twitter', class: "nav-link" %>
+        <% end %>
+      </li>
+    </ul>
   </div>
-</div>
+</nav>

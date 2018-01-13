@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
-    </style>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<div class="row mt-5 mb-5">
+  <div class="col">
+    <%= form_tag "/", method: "GET", class: "form-inline" do %>
+      <div class="form-group mr-3">
+        <%= label_tag :keyword, "検索キーワード", class: "sr-only" %>
+        <%= text_field_tag :keyword, "", class: "form-control", placeholder: "検索キーワード" %>
+      </div>
+      <%= submit_tag "検索", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

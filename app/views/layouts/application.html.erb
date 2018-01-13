@@ -9,8 +9,12 @@
   </head>
 
   <body>
-    <%= render "/layouts/header" %>
-    <% if flash[:notice].present? %><p><%= flash[:notice] %></p><% end %>
-    <%= yield %>
+    <div class="bg-light">
+      <%= render "/layouts/header" %>
+    </div>
+    <div class="container">
+      <% if flash[:notice].present? %><p><%= flash[:notice] %></p><% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
