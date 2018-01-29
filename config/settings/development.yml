@@ -1,3 +1,5 @@
 twitter:
   api_key: xxxxxx
   api_secret: xxxxxx
+gnavi:
+  access_key: xxxxxx
