@@ -19,6 +19,7 @@ gem 'oauth'
 gem 'omniauth-twitter'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
+gem 'faraday'
 
 group :development, :test do
   gem 'pry-rails'
