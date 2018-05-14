@@ -1,2 +1,19 @@
 <h1>検索結果</h1>
-<%= @response %>
+<ul>
+  <% @gnavi_restaurants.each do |rest| %>
+    <li>
+      <ul>
+        <li><%= rest.id %></li>
+        <li><%= rest.name %></li>
+        <li><%= rest.category %></li>
+        <li><%= link_to rest.url, rest.url, target: "_blank" %></li>
+        <li><%= link_to rest.url_mobile, rest.url_mobile, target: "_blank" %></li>
+        <% if rest.shop_image1.present? %><li><%= image_tag rest.shop_image1, width: "100" %></li><% end %>
+        <% if rest.shop_image2.present? %><li><%= image_tag rest.shop_image2, width: "100" %></li><% end %>
+        <li><%= rest.address %></li>
+        <li><%= rest.pr_short %></li>
+        <li><%= rest.pr_long %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>
